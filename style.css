@@ -37,9 +37,9 @@ html, body{
   height: 100%;
   margin: 0;
   padding: 0;
-  -moz-transition: all 5s linear;
-  -webkit-transition: all 5s linear;
-  transition: all 5s linear;
+  -moz-transition: background-color 5s linear;
+  -webkit-transition: background-color 5s linear;
+  transition: background-color 5s linear;
 }
 
 #player{
