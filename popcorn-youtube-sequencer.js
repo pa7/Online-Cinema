@@ -4,6 +4,7 @@
  * Public Interface
  * - add: sets an array of youtube urls
  * - play: starts a loop of set trailers
+ * - next: shows the next trailer in the looping queue  
  * - destroy: destroys the player used for the trailer-loop
  */
 var PopcornYoutubeSequencer = (function(){
@@ -33,6 +34,7 @@ var PopcornYoutubeSequencer = (function(){
   return {
     add: add,
     play: play,
+    next: next,
     destroy:  destroy
   };
 }());

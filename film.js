@@ -1,6 +1,6 @@
 $(function(){
   var curtainAnimationDuration = 200;
-  PopcornYoutubeSequencer.add(["http://www.youtube.com/watch?v=cd-go0oBF4Y", "http://www.youtube.com/watch?v=Zm7r491n-8o"]);
+  PopcornYoutubeSequencer.add(["http://www.youtube.com/watch?v=cd-go0oBF4Y&controls=0", "http://www.youtube.com/watch?v=Zm7r491n-8o&controls=0"]);
   var startPlaying = function(){
     PopcornYoutubeSequencer.play();
   };
