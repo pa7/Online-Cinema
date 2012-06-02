@@ -14,18 +14,19 @@
       </div>
       <div id="player-container">
         <video id="player" class="video-js vjs-default-skin" controls
-            preload="auto" width="640" height="264"
+            preload="auto"
             data-setup="{}">
-          <source src="http://mirror.bigbuckbunny.de/peach/bigbuckbunny_movies/big_buck_bunny_1080p_h264.mov" type='video/h264'>
-          <source src="http://mirror.bigbuckbunny.de/peach/bigbuckbunny_movies/big_buck_bunny_1080p_stereo.ogg" type='video/ogg'>
         </video>
+        <div id="trailers"></div>
       </div>
     </div>
   </div>
+  <script src="http://popcornjs.org/code/dist/popcorn-complete.min.js"></script>
   <script src="http://vjs.zencdn.net/c/video.js"></script>
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
   <script src="vendor/jquery-animate-enhanced.js"></script>
   <script src="vendor/modernizr.custom.js"></script>
+  <script src="popcorn-youtube-sequencer.js"></script>
   <script src="film.js"></script>
 </body>
 </html>

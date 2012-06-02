@@ -1,8 +1,15 @@
 $(function(){
+  var curtainAnimationDuration = 200;
+  PopcornYoutubeSequencer.add(["http://www.youtube.com/watch?v=cd-go0oBF4Y", "http://www.youtube.com/watch?v=Zm7r491n-8o"]);
+  var startPlaying = function(){
+    PopcornYoutubeSequencer.play();
+  };
   $('#open-curtains').click(function(){
     var width = $('#curtain-left').width();
-    $('#curtain-left').animate({'left': '-='+width+'px'}, 7000);
-    $('#curtain-right').animate({'left': '+='+width+'px'}, 7000);
+    $('#curtain-left').animate({'left': '-='+width+'px'}, curtainAnimationDuration, function(){
+      startPlaying();
+    });
+    $('#curtain-right').animate({'left': '+='+width+'px'}, curtainAnimationDuration);
     $('#wrapper').addClass('dark-bg');
   });
 });
