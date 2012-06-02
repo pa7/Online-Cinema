@@ -17,6 +17,7 @@ html, body{
   width: 50%;
   height: 100%;
   background-color: red;
+  z-index: 2;
 }
 
 #curtain-left{
@@ -39,4 +40,8 @@ html, body{
   -moz-transition: all 5s linear;
   -webkit-transition: all 5s linear;
   transition: all 5s linear;
+}
+
+#player{
+  z-index: 1;
 }
