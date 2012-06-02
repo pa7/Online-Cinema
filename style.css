@@ -6,8 +6,8 @@ html, body{
 #surface{
   overflow: hidden;
   position: relative;
-  width: 600px;
-  height: 350px;
+  width: 680px;
+  height: 500px;
   background-color: #333;
 }
 

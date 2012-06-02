@@ -28,6 +28,8 @@ var PopcornYoutubeSequencer = (function(){
         play();
       },
       destroy = function(){
+
+        player.pause();
         player.destroy();
       };
 

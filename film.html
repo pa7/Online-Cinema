@@ -6,7 +6,7 @@
 </head>
 <body>
   <div id="wrapper">
-    <button id="open-curtains">Open</button>
+    <button id="start-film">Start film</button>
     <div id="surface">
       <div id="curtains">
         <div id="curtain-left"></div>
@@ -15,7 +15,10 @@
       <div id="player-container">
         <video id="player" class="video-js vjs-default-skin" controls
             preload="auto"
-            data-setup="{}">
+            data-setup="{}"
+            height="480"
+            width="640"
+            >
         </video>
         <div id="trailers"></div>
       </div>
