@@ -1,0 +1,138 @@
+<!doctype html>
+<title>Movie Promo Page</title>
+<link href='http://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="css/style.css" />
+<header>
+  <div class="container">
+    <div class="logo"></div>
+    <div class="center">
+      <h1>The Dark Knight Rises</h1>
+      <span class="subtitle">Copyright &copy; 2012 Magnolia Pictures</span>
+    </div>
+    <div class="user">
+      <img src="img/fb_connect.png">
+    </div>
+  </div>
+</header>
+<article>
+  <div class="container">
+    <div class="video">
+      <video></video>
+    </div>
+    <aside>
+      <!--<div class="print callForAction">Buy a ticket</div>-->
+      <div class="screenings">
+        <h2>Screenings</h2>
+        <table>
+          <tr>
+            <td>Monday
+            <td>5 pm
+            <td><span class="button buy">buy ticket</span>
+          </tr>
+          <tr>
+            <td>Tuesday
+            <td>5 pm
+            <td><span class="button buy">buy ticket</span>
+          </tr>
+          <tr>
+            <td>Wednesday
+            <td>5 pm
+            <td><span class="button buy">buy ticket</span>
+          </tr>
+          <tr>
+            <td>Thursday
+            <td>5 pm
+            <td><span class="button buy">buy ticket</span>
+          </tr>
+        </table>
+      </div>
+      <div class="printer">
+        <div class="paperRoll">
+          <div class="paper">
+            <div class="ticket">
+              <div class="box">
+                <div class="header">The Dark Knight Rises <span class="prize">$1</span></div>
+                <div class="columns">
+                  <div class="info">On Air <span class="time">9:30 pm</span></div>
+                  <div class="date">
+                    <span class="day">28</span>
+                    <span class="month">August</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="ticket">
+              <div class="box">
+                <div class="header">The Dark Knight Rises <span class="prize">$1</span></div>
+                <div class="columns">
+                  <div class="info">On Air <span class="time">9:30 pm</span></div>
+                  <div class="date">
+                    <span class="day">28</span>
+                    <span class="month">August</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="whosComing">
+        <h2>Who's coming <span class="button">see all</span><span class="count">5 369 People</span></h2>
+      </div>
+    </aside>
+    <section>
+      <h2>Synopsis</h2>
+      <p>In Gotham City, the Joker and his accomplices rob a mob owned bank. After orchestrating their deaths, he escapes alone. Batman and Lieutenant Jim Gordon decide to include sincere new district attorney Harvey Dent, who is dating Rachel Dawes, in their plan to tackle the mob and Bruce offers him a fundraiser. Mob bosses Sal Maroni, Gambol, and The Chechen are informed by Lau, a Chinese accountant, that he has hidden their funds and fled to Hong Kong to escape the new pressure. The Joker interrupts the meeting warning that Batman is unhindered by jurisdiction. They laughably refuse when Joker offers to kill Batman for half the money and Gambol puts a bounty on him. Later, the Joker kills Gambol and takes control of his men, while Batman captures Lau and delivers him back to Gotham where he agrees to testify.</p>
+      <table class="info">
+        <tr>
+          <td>Genre
+          <td>Action
+        </tr>
+        <tr>
+          <td>Director
+          <td>Rob Reiner
+        </tr>
+        <tr>
+          <td>Cast
+          <td>Morgan Freeman, Virginia Madsen, Madeline Carroll
+        </tr>
+        <tr>
+          <td>Writers
+          <td>Rob Reiner, Guy Thomas
+        </tr>
+        <tr>
+          <td>Run Time
+          <td>109 minutes
+        </tr>
+      </table>
+      <h2>The Dark Knight Articles on <span class="moviepilot">moviepilot</span> <span class="button">see all articles</span></h2>
+      <ul class="articles">
+        <li>
+          <img src="img/newsimage1.png">
+          <div class="subtitle time">1 day ago</div>
+          <h3>Are You Joking? No Heath Ledger Reference in New Batman Flick?</h3>
+        </li>
+        <li>
+          <img src="img/newsimage2.png">
+          <div class="subtitle time">1 day ago</div>
+          <h3>Come At Me Bro! Bane And Batman Get Down To Business In New 'TDKR' Banners</h3>
+        </li>
+        <li class="last">
+          <img src="img/newsimage3.png">
+          <div class="subtitle time">1 day ago</div>
+          <h3>Christian Bale Bares IT All In His Biography?</h3>
+        </li>
+      </ul>
+    </section>
+  </div>
+</article>
+<script>
+  var buyButtons = document.querySelectorAll('.buy');
+  var printer = document.querySelector('.printer');
+  
+  for(var i=0; i<buyButtons.length; i++) buyButtons[i].addEventListener('click', buy);
+  
+  function buy(){
+    printer.classList.toggle('printed');
+  }
+</script>
