@@ -9,6 +9,6 @@ function buy(){
 
 $('.video').click(function(){
   var $this = $(this);
-  var youtubeTrailerId = $this.data('trailerYtId');
+  var youtubeTrailerId = $this.data('trailerytid');
   $(this).append('<iframe width="920" height="518" src="http://www.youtube.com/embed/'+youtubeTrailerId+'", frameborder="0", allowfullscreen>');
 });
