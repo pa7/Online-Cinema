@@ -109,7 +109,7 @@ article {
       text-align: right;
     }
     section .info {
-      margin: 0 0 21px;
+      margin: 0 0 55px;
     }
   aside {
     float: right;
@@ -176,14 +176,14 @@ article {
   }
 
 .screenings {
-  background: rgba(0,0,0,.05);
   padding: 13px;
-  margin: 0 -34px 221px;
+  margin: 13px -34px 221px;
   color: #666;
   font-size: 14px;
   border: 1px solid #111;
   border-bottom-color: #111;
   border-radius: 8px;
+  background: -webkit-linear-gradient(rgba(0,0,0,.05), rgba(255,255,255,.03));
   box-shadow: 
     0 1px rgba(255,255,255,.08),
     0 1px rgba(0,0,0,.13) inset,
@@ -207,11 +207,12 @@ article {
   .screenings td:last-child {
     text-align: right;
   }
-.printer {
-  position: relative;
-  width: 278px;
+.screenings .printer {
   height: 2px;
   margin: 0 5px 5px;
+}
+.printer {
+  position: relative;
   z-index: 1;
 }
   .printer:before {
@@ -220,11 +221,16 @@ article {
     z-index: -1;
     top: -2px;
     left: -5px;
-    width: 288px;
+    right: -5px;
     height: 2px;
     background: black;
     border-radius: 6px;
-    box-shadow: 0 0 0 6px rgba(0,0,0,.21);
+    box-shadow: 
+      0 0 0 2px rgba(255,255,255,.01),
+      0 0 0 3px rgba(255,255,255,.02),
+      0 0 0 4px rgba(255,255,255,.02),
+      0 0 0 5px rgba(255,255,255,.02),
+      0 0 0 6px rgba(0,0,0,.34);
   }
   .paperRoll {
     overflow: hidden;
@@ -251,7 +257,7 @@ article {
     -webkit-transition: 500ms ease 1s;
   }*/
 .ticket {
-  height: 129px;
+  margin: 1px 0;
   position: relative;
   padding: 21px 21px 28px;
   color: #343433;
@@ -267,15 +273,16 @@ article {
     content: "";
     position: absolute;
     z-index: 1;
-    height: 10px;
+    height: 5px;
     left: 12px;
     right: 12px;
-    bottom: -6px;
+    bottom: -1px;
     background: url(../img/nob.png);
   }
   .ticket:before {
-    top: -6px;
+    top: -1px;
     bottom: auto;
+    background-position: 0 -5px;
   }
   .ticket .box {
     padding: 8px;
@@ -302,12 +309,6 @@ article {
       padding-top: 8px;
     }
     .ticket .info, .ticket .date {
-      float: left;
-    }
-    .ticket .title {
-      margin: 40px 0 0 5px;
-      font-size: 34px;
-      line-height: 1;
       float: left;
     }
     .ticket .info {
@@ -411,6 +412,114 @@ footer {
   background: url(../img/moviepilot_bottom.png);
 }
 
-.ticketList {
-  margin: 34px 0;
+.home {
+  -webkit-user-select: none;
 }
+.ticketList {
+  padding: 34px 0;
+  position: absolute;
+  top: 100px;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  overflow: hidden;
+}
+  .ticketList .container {
+    height: 100%;
+  }
+  .ticketList .cover {
+    width: 100%;
+    height: 100px;
+    top: -102px;
+    position: absolute;
+    z-index: 100;
+    border-bottom: 2px solid black;
+    background: url(../img/main_back.png);
+    box-shadow: 
+      0 -2px rgba(255,255,255,.01) inset,
+      0 -3px rgba(255,255,255,.02) inset,
+      0 -4px rgba(255,255,255,.02) inset,
+      0 -5px rgba(255,255,255,.02) inset,
+      0 -6px rgba(0,0,0,.34) inset;
+  }
+  .ticketList .printer {
+    position: absolute;
+    top: 50px;
+    bottom: 55px;
+    width: 100%;
+  }
+  .ticketList .paperRoll {
+    overflow: visible;
+  }
+  .ticketList .paper {
+    margin-top: 0;
+    top: -13px;
+    position: relative;
+    -webkit-perspective: 1000px;
+    -webkit-transform-style: preserve-3d;
+  }
+  .ticketList .holder {
+    padding: 1px 0;
+    position: absolute;
+    width: 100%;
+    box-sizing: border-box;
+    -webkit-transform: translateZ(0);
+    -webkit-transform-style: preserve-3d;
+  }
+  .ticketList .ticket {
+    margin: 0;
+    padding: 13px;
+    -webkit-transform-origin: top;
+    cursor: move;
+  }
+  /*.ticketList .holder:nth-child(odd) .ticket {
+    -webkit-transform-origin: top;
+  }
+  .ticketList .holder:nth-child(even) .ticket {
+    -webkit-transform-origin: bottom;
+  }*/
+  .ticketList .box {
+    position: relative;
+    margin: 8px 21px;
+    padding: 21px 27px;
+  }
+  .ticketList .prize {
+    padding: 6px 5px;
+    margin-top: -5px;
+    margin-right: 18px;
+    font-size: 34px;
+    line-height: 1;
+    border-radius: 8px;
+    float: left;
+  }
+  .ticketList .title {
+    font-size: 30px;
+  }
+  .ticketList .subtitle {
+    margin-top: 8px;
+    color: inherit;
+  }
+    .ticketList .rating {
+      margin: 3px;
+      height: 11px;
+      width: 11px;
+      font: 0/0 a;
+      color: transparent;
+      text-shadow: none;
+      display: inline-block;
+      border: 1px solid black;
+      border-radius: 1px;
+      vertical-align: top;
+      background: url(../img/MAA2.png) no-repeat center;
+      background-size: 6px;
+    }
+  .ticketList .date {
+    position: absolute;
+    top: 10px;
+    right: 13px;
+  }
+  input[type="range"] {
+    position: absolute;
+    z-index: 99;
+    -webkit-transform: translateZ(200px);
+  }
