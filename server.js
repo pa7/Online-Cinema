@@ -17,14 +17,27 @@ app.configure(function(){
 // This app's port
 var appPort = process.env['app_port'] || 3000;
 
+app.get('/', function(req, res){
+  res.render('index');
+});
+
 app.get('/screenings', function(req, res){
   Screening.all(function(err, screenings){
     res.render('screenings', {screenings : screenings});
   });
 });
 
-app.get('/', function(req, res){
-  res.render('index');
+app.get('/screenings/:screening_id', function(req, res){
+  Screening.get(req.params.screening_id, function(err, screening){
+    res.render('screening', screening);
+  });
+});
+
+app.post('/screenings/:screening_id/sources', function(req, res){
+  if(screenings[req.params.screening_id].key == req.body.key)
+    res.send({ sources: { mp4: "/films/BigBuckBunny_640x360.m4v"}});
+  else
+    res.send(403);
 });
 
 var films = {
@@ -57,17 +70,6 @@ var screenings = {
     "description": "The awesome description for this screening!"
   }
 };
-
-app.get('/screening/:screening_id', function(req, res){
-  res.render('screening', screenings[req.params.screening_id]);
-});
-
-app.post('/screening/:screening_id/sources', function(req, res){
-  if(screenings[req.params.screening_id].key == req.body.key)
-    res.send({ sources: { mp4: "/films/BigBuckBunny_640x360.m4v"}});
-  else
-    res.send(403);
-});
 
 app.listen(appPort);
 console.log('Server running on port -> ' + appPort);

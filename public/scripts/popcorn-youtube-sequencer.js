@@ -15,7 +15,7 @@ var PopcornYoutubeSequencer = (function(){
         urls = youtubeUrls;
       },
       play = function(){
-        player = Popcorn.youtube('#trailers', urls[currentTrailer]);
+        player = Popcorn.youtube('#trailers', urls[currentTrailer].youtubeUrl);
         player.on('ended', next );
         player.play();
       },

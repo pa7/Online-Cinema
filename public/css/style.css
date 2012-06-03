@@ -413,3 +413,7 @@ footer {
 .ticketList {
   margin: 34px 0;
 }
+
+.hidden{
+  display: none;
+}
