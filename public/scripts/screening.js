@@ -1,7 +1,18 @@
 $(function(){
   var activateBt = $('#activate');
   var keyInput = $('#keyInput');
-  activateBt.click(function(){
+  var animation = false;
+  keyInput.keyup(function(ev){
+    var e = ev.keyCode;
+    if(e == 13){
+       postKey(); 
+    }
+    if(!animation){
+      $('#validateArrow').addClass('animate');
+      animation = true;
+    }
+  });
+  var postKey = function(){
     var key = keyInput.val();
     if(key)
       $.ajax({
@@ -9,15 +20,17 @@ $(function(){
         type: 'POST',
         data: { key: key },
         success: function(){
-          activateBt.remove();
-          keyInput.remove();
+          $('article.validation').remove();
+          $('article.hidden').css('opacity', 0);
+          $('article.hidden').fadeIn();
+          $('article.hidden').removeClass('hidden');
           startTrailers();
         },
         error: function(err, xhr){
           console.log(err, xhr);
         }
       });
-  });
+  };
 
   var startInHalfAMinute = new Date().getTime() + 30000;
   var film = {

@@ -51,7 +51,7 @@ header {
     margin: -7px 0 0 -6px;
     width: 76px;
     height: 76px;
-    background: url(../img/icon_top.png);
+    background: url(../img/logo_top.png);
   }
   .center {
     /* logos offset: 21 gutter 64 width 21 gutter = 108 */
@@ -527,4 +527,48 @@ footer {
   }
   .hidden{
     display: none;
+  }
+  article.validation {
+    display: -webkit-box;
+    -webkit-box-align: center;
+    -webkit-box-pack: center;
+    position: absolute;
+    -webkit-box-orient: vertical;
+    left: 0;
+    right: 0;
+    top: 100px;
+    bottom: 0;
+  }
+  #validateTicket {
+    background:url(../img/ticket.png);
+    width: 323px;
+    height: 149px;
+  }
+  .validation div{
+    width: 325px;
+    margin-top: -20px;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  #validateArrow {
+    position:relative;
+    width: 108px;
+    height: 112px;
+    background: url(../img/arrow.png) no-repeat center;
+    margin:auto;
+    top:-50px;
+  }
+  #validateArrow.animate {
+    -webkit-animation:arr 1s infinite linear;
+  }
+  @-webkit-keyframes arr {
+    0% { top:-50px; }
+    80% { top:-40px; }
+    100% { top: -50px; }
+  }
+  #keyInput {
+    font-size:23px;
+    padding:5px;
+    border-radius: 3px;
+    border: 1px solid black;
   }

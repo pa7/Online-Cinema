@@ -6,9 +6,12 @@ header
       span.subtitle Screening
     .user
       img(src='/img/fb_connect.png')
-article
+article.validation
+  #validateTicket
+    #validateArrow
+  div Enter your ticket code and press enter.
   input#keyInput(type="text")
-  button#activate Send the key
+article.hidden
   .container
     .video
       #player-container
