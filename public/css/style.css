@@ -2,7 +2,7 @@ body {
   margin: 0;
   color: #e5e5e5;
   font: 12px/16px Helvetica;
-  background: url(../img/main_back.png);
+  background: url(/img/main_back.png);
 }
 h1 {
   margin: 0;
@@ -48,7 +48,7 @@ header {
     margin: -7px 0 0 -6px;
     width: 76px;
     height: 76px;
-    background: url(../img/icon_top.png);
+    background: url(/img/icon_top.png);
   }
   .center {
     /* logos offset: 21 gutter 64 width 21 gutter = 108 */
@@ -71,7 +71,7 @@ article {
     margin: 34px 0;
     width: 920px;
     height: 548px;
-    background: url(../img/movie_image.png);
+    background: url(/img/movie_image.png);
     box-shadow: 0 0 13px black;
   }
   .video:before,
@@ -93,7 +93,7 @@ article {
     left: -64px;
     width: 1047px;
     height: 117px;
-    background: url(../img/shadow_movie_bottom.png);
+    background: url(/img/shadow_movie_bottom.png);
   }
   article section {
     float: left;
@@ -271,7 +271,7 @@ article {
     left: 12px;
     right: 12px;
     bottom: -6px;
-    background: url(../img/nob.png);
+    background: url(/img/nob.png);
   }
   .ticket:before {
     top: -6px;
@@ -359,7 +359,7 @@ article {
   color: transparent;
   text-shadow: none;
   vertical-align: top;
-  background: url(../img/tiny_logo.png);
+  background: url(/img/tiny_logo.png);
 }
 
 .articles {
@@ -390,7 +390,7 @@ article {
     margin: 5px 5px 5px 2px;
     display: inline-block;
     vertical-align: bottom;
-    background: url(../img/time_icon.png);
+    background: url(/img/time_icon.png);
   }
   
 footer {
@@ -408,7 +408,7 @@ footer {
   font: 0/0 a;
   color: transparent;
   text-shadow: none;
-  background: url(../img/moviepilot_bottom.png);
+  background: url(/img/moviepilot_bottom.png);
 }
 
 .ticketList {

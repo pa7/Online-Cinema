@@ -69,13 +69,6 @@ article
           img(src='/img/newsimage3.png')
           div(class='subtitle time') 1 day ago
           h3 Christian Bale Bares IT All In His Biography?
+
 link(rel='stylesheet', href='/css/style.css')
-script(type='text/javascript')
-  var buyButtons = document.querySelectorAll('.buy');
-  var printer = document.querySelector('.printer');
-  
-  for(var i=0; i<buyButtons.length; i++) buyButtons[i].addEventListener('click', buy);
-  
-  function buy(){
-    printer.classList.toggle('printed');
-  }
+script(src='/scripts/promo.js')
