@@ -1,11 +1,11 @@
 $(function(){
-  var startInHalfAMinute = new Date().getTime() + 3000;
+  var startInHalfAMinute = new Date().getTime() + 30000;
   var film = {
     startsAt: startInHalfAMinute,
     sources: {
       mp4: "films/BigBuckBunny_640x360.m4v"
     },
-    trailers: ["http://www.youtube.com/watch?v=Zm7r491n-8o&controls=0", "http://www.youtube.com/watch?v=cd-go0oBF4Y&controls=0"]
+    trailers: ["http://www.youtube.com/watch?v=cd-go0oBF4Y&controls=0", "http://www.youtube.com/watch?v=Zm7r491n-8o&controls=0"]
   };
 
   PopcornYoutubeSequencer.add(film.trailers);
