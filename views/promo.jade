@@ -21,16 +21,17 @@ article
         .printer
           .paperRoll
             .paper
-              - var dummyScreenings = [{name:"Testname",prize:1,time:'9:30',day:28,month:'August'},{name:"Testname",prize:1,time:'9:30',day:28,month:'August'}];
+              - var dummyScreenings = [{name:"The Dark Knight",prize:1,time:'9:30',day:28,month:'August'},{name:"The Dark Knight",prize:1,time:'9:30',day:28,month:'August'}];
               each ds in dummyScreenings
-                .ticket
-                  .box
-                    .header #{ds.name} <span class='prize'>$#{ds.prize}</span>
-                    .columns
-                      .info On Air <span class='time'>#{ds.time} pm</span>
-                      .date
-                        .day= ds.day
-                        .month= ds.month
+                a(href="/screenings/bbb")
+                  .ticket
+                    .box
+                      .header #{ds.name} <span class='prize'>$#{ds.prize}</span>
+                      .columns
+                        .info On Air <span class='time'>#{ds.time} pm</span>
+                        .date
+                          .day= ds.day
+                          .month= ds.month
     section
       h2 Synopsis
       p In Gotham City, the Joker and his accomplices rob a mob owned bank. After orchestrating their deaths, he escapes alone. Batman and Lieutenant Jim Gordon decide to include sincere new district attorney Harvey Dent, who is dating Rachel Dawes, in their plan to tackle the mob and Bruce offers him a fundraiser. Mob bosses Sal Maroni, Gambol, and The Chechen are informed by Lau, a Chinese accountant, that he has hidden their funds and fled to Hong Kong to escape the new pressure. The Joker interrupts the meeting warning that Batman is unhindered by jurisdiction. They laughably refuse when Joker offers to kill Batman for half the money and Gambol puts a bounty on him. Later, the Joker kills Gambol and takes control of his men, while Batman captures Lau and delivers him back to Gotham where he agrees to testify.

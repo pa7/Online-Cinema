@@ -33,9 +33,45 @@ app.get('/screenings/:screening_id', function(req, res){
   });
 });
 
+var screenings = {
+  "bbb" : {
+    "film_id": "tdkr",
+    "film": { "description": "wow, so many reasons to watch this movie", "name": "The Dark Knight Rises" },
+    "key": "test",
+    "isPrivate": false,
+    "startTime": 9234683,
+    "trailer-ids": [
+      "f07c069e204d80afcbe3eb390b000b7e",
+      "f07c069e204d80afcbe3eb390b001602",
+      "f07c069e204d80afcbe3eb390b001fa0",
+      "f07c069e204d80afcbe3eb390b00231b"
+    ],
+    "description": "The awesome description for this screening!"
+  },
+  "sintel": {
+    "film_id": "tdkr",
+    "film": { "description": "wow, so many reasons to watch this movie", "name": "The Dark Knight Rises" },
+    "key": "test2",
+    "isPrivate": false,
+    "startTime": 9234683,
+    "trailer-ids": [
+      "f07c069e204d80afcbe3eb390b000b7e",
+      "f07c069e204d80afcbe3eb390b001602",
+      "f07c069e204d80afcbe3eb390b001fa0",
+      "f07c069e204d80afcbe3eb390b00231b"
+    ],
+    "description": "The awesome description for this screening!"
+  }
+};
+
+var sources = {
+  "bbb" : { sources: { mp4: "/films/BigBuckBunny_640x360.m4v"} },
+  "sintel" : { sources: { mp4: "/films/sintel-1280-surround.mp4"} }
+};
+
 app.post('/screenings/:screening_id/sources', function(req, res){
   if(screenings[req.params.screening_id].key == req.body.key)
-    res.send({ sources: { mp4: "/films/BigBuckBunny_640x360.m4v"}});
+    res.send(sources[req.params.screening_id]);
   else
     res.send(403);
 });
@@ -53,23 +89,6 @@ var films = {
 app.get('/promo/:name', function(req, res){
   res.render('promo', films[req.params.name]);
 });
-
-var screenings = {
-  "1337" : {
-    "film_id": "tdkr",
-    "film": { "description": "wow, so many reasons to watch this movie", "name": "The Dark Knight Rises" },
-    "key": "letmein",
-    "isPrivate": false,
-    "startTime": 9234683,
-    "trailer-ids": [
-      "f07c069e204d80afcbe3eb390b000b7e",
-      "f07c069e204d80afcbe3eb390b001602",
-      "f07c069e204d80afcbe3eb390b001fa0",
-      "f07c069e204d80afcbe3eb390b00231b"
-    ],
-    "description": "The awesome description for this screening!"
-  }
-};
 
 app.listen(appPort);
 console.log('Server running on port -> ' + appPort);

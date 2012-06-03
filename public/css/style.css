@@ -28,6 +28,9 @@ h3 {
   color: #999;
   text-shadow: 0 -1px black;
 }
+a {
+  text-decoration: none;
+}
 .subtitle {
   color: #5c5d5d;
 }

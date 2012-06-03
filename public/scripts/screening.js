@@ -1,4 +1,24 @@
 $(function(){
+  var activateBt = $('#activate');
+  var keyInput = $('#keyInput');
+  activateBt.click(function(){
+    var key = keyInput.val();
+    if(key)
+      $.ajax({
+        url: window.location.href + '/sources',
+        type: 'POST',
+        data: { key: key },
+        success: function(){
+          activateBt.remove();
+          keyInput.remove();
+          startTrailers();
+        },
+        error: function(err, xhr){
+          console.log(err, xhr);
+        }
+      });
+  });
+
   var startInHalfAMinute = new Date().getTime() + 30000;
   var film = {
     startsAt: startInHalfAMinute,
@@ -33,7 +53,6 @@ $(function(){
   var curtainDelay = 1000;
   var curtainAnimationDuration = 2000;
   setTimeout(function(){
-    startTrailers();
     var width = $('#curtain-left').width();
     $('#curtain-left').animate({'left': '-='+width+'px'}, curtainAnimationDuration, function(){
       
