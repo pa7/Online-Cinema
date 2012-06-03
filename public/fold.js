@@ -7,6 +7,10 @@ var minHeight = 5;
 var paper = $('.paper').height(ticketCount*ticketHeight);
 var printer = $('.printer');
 
+tickets.click(function(){
+  window.location.href = "/promo/tdkr";
+});
+
 slider.change(function(){
   updateHeight(this.value/100 * ticketHeight);
 });
@@ -15,6 +19,14 @@ holders.each( function(i, el){ placeHolder(i, el); });
 
 function placeHolder(i, holder){
   $(holder).css('webkitTransform', 'translateY('+(i*ticketHeight)+'px)');
+}
+
+updateHeight(10);
+
+function updateHeight(height){
+  holders.each(function(i, el){ 
+    placeTicket(i, i*height, height);
+  });
 }
 
 function placeTicket(i, top, height){
@@ -40,11 +52,11 @@ function getAngle(height){
   return Math.acos(height/ticketHeight);
 }
 
-tickets.mousedown(function(event){
+function startDrag(event){
   paper.data('posY', event.pageY);
   $(document).mousemove(drag);
   $(document).mouseup(stopToDrag);
-});
+}
 
 function drag(event){
   if(event.pageY !== paper.data('posY')){
@@ -96,6 +108,9 @@ function collisionDetection(){
   }
 }
 
-collisionDetection();
+function init(){
+  tickets.mousedown(startDrag);
+  collisionDetection();
+}
 
 //updateHeight(ticketHeight/2);
