@@ -17,6 +17,19 @@ app.get('/', function(req, res){
   res.render('index');
 });
 
+var films = {
+  "tdkr": {
+    "name": "The Dark Knight Rises",
+    "copyright": "Copyright &copy; 2012 Magnolia Pictures",
+    "screenings": [{"startTime": "now"}, {"startTime": "soon"}]
+  }
+};
+
+app.get('/promo/:name', function(req, res){
+  console.log(req.params);
+  res.render('promo', films[req.params.name]);
+});
+
 app.configure(function(){
   app.use(express.methodOverride());
   app.use(express.bodyParser());

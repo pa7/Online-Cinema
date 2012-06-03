@@ -1,0 +1,81 @@
+header
+  .container
+    .logo
+    .center
+      h1= name
+      span.subtitle= copyright
+    .user
+      img(src='/img/fb_connect.png')
+article
+  .container
+    .video
+      video
+    aside
+      .screenings
+        h2 Screenings
+        table
+          each screening in screenings
+            tr
+              td= screening.startTime
+              td
+                span(class='button buy') buy ticket
+      .printer
+        .paperRoll
+          .paper
+            - var dummyScreenings = [{name:"Testname",prize:1,time:'9:30',day:28,month:'August'},{name:"Testname",prize:1,time:'9:30',day:28,month:'August'}];
+            each ds in dummyScreenings
+              .ticket
+                .box
+                  .header= ds.name 
+                  <span class='prize'>$#{ds.prize}</span>
+                  .columns
+                    .info On Air
+                    <span class='time'>$#{ds.time} pm</span>
+                    .date
+                      .day= ds.day
+                      .month= ds.month
+      .whosComing
+        h2 Who's coming <span class="button">see all</span> <span class="count">5 369 People</span>
+    section
+      h2 Synopsis
+      p In Gotham City, the Joker and his accomplices rob a mob owned bank. After orchestrating their deaths, he escapes alone. Batman and Lieutenant Jim Gordon decide to include sincere new district attorney Harvey Dent, who is dating Rachel Dawes, in their plan to tackle the mob and Bruce offers him a fundraiser. Mob bosses Sal Maroni, Gambol, and The Chechen are informed by Lau, a Chinese accountant, that he has hidden their funds and fled to Hong Kong to escape the new pressure. The Joker interrupts the meeting warning that Batman is unhindered by jurisdiction. They laughably refuse when Joker offers to kill Batman for half the money and Gambol puts a bounty on him. Later, the Joker kills Gambol and takes control of his men, while Batman captures Lau and delivers him back to Gotham where he agrees to testify.
+      table.info
+        tr
+          td Genre
+          td Action
+        tr
+          td Director
+          td Rob Reiner
+        tr
+          td Cast
+          td Morgan Freeman, Virginia Madsen, Madeline Carroll
+        tr
+          td Writers
+          td Rob Reiner, Guy Thomas
+        tr
+          td Run Time
+          td 109 minutes
+      h2 The Dark Knight Articles on <span class="moviepilot">moviepilot</span> <span class="button">see all articles</span>
+      ul.articles
+        li
+          img(src='/img/newsimage1.png)
+          div(class='subtitle time') 1 day ago
+          h3 Are You Joking? No Heath Ledger Reference in New Batman Flick?
+        li
+          img(src='/img/newsimage2.png')
+          div(class='subtitle time') 1 day ago
+          h3 Come At Me Bro! Bane And Batman Get Down To Business In New 'TDKR' Banners
+        li.last
+          img(src='/img/newsimage3.png')
+          div(class='subtitle time') 1 day ago
+          h3 Christian Bale Bares IT All In His Biography?
+link(rel='stylesheet', href='/css/style.css')
+script(type='text/javascript')
+  var buyButtons = document.querySelectorAll('.buy');
+  var printer = document.querySelector('.printer');
+  
+  for(var i=0; i<buyButtons.length; i++) buyButtons[i].addEventListener('click', buy);
+  
+  function buy(){
+    printer.classList.toggle('printed');
+  }
