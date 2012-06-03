@@ -31,6 +31,8 @@ var films = {
   "tdkr": {
     "name": "The Dark Knight Rises",
     "copyright": "Copyright &copy; 2012 Magnolia Pictures",
+    "poster": "../img/movie_image.png",
+    "trailerYtId": "g8evyE9TuYk",
     "screenings": [{"startTime": "now"}, {"startTime": "soon"}]
   }
 };
