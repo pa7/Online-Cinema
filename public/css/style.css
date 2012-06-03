@@ -525,3 +525,6 @@ footer {
     z-index: 99;
     -webkit-transform: translateZ(200px);
   }
+  .hidden{
+    display: none;
+  }
