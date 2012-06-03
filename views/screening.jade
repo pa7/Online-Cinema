@@ -1,0 +1,26 @@
+header
+  .container
+    .logo
+    .center
+      h1= film.name
+      span.subtitle Screening
+    .user
+      img(src='/img/fb_connect.png')
+article
+  input#keyInput(type="text")
+  button#activate Send the key
+  .container
+    .video
+      #player-container
+        video.hidden(id="player", class="video-js vjs-default-skin", controls, preload="auto", data-setup="{}", height="518", width="920")
+        #trailers(style="width:920px; height:518px;")
+
+script
+  var trailers = !{JSON.stringify(trailers)};
+
+link(href="http://vjs.zencdn.net/c/video-js.css", rel="stylesheet")
+
+script(src="http://popcornjs.org/code/dist/popcorn-complete.min.js")
+script(src="http://vjs.zencdn.net/c/video.js")
+script(src='/scripts/popcorn-youtube-sequencer.js')
+script(src='/scripts/screening.js')

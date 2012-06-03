@@ -8,10 +8,20 @@ exports.Screening = (function() {
 
   function Screening() {}
 
-  Screening.findByCouchId = function(couchId, callback) {
-    return db.get(couchId, function(err, doc) {
-      doc.id = doc._id;
-      return callback(err, doc);
+  Screening.get = function(couchId, callback) {
+    // db.get(couchId, function(err, doc) {
+    //   doc.id = doc._id;
+    //   callback(err, doc);
+    // });
+    callback(null, {
+      film: {
+        name: "The Dark Knight Rises"
+      },
+      trailers: [
+        { youtubeUrl: "http://www.youtube.com/watch?v=sftuxbvGwiU" },
+        { youtubeUrl: "http://www.youtube.com/watch?v=cd-go0oBF4Y" },
+        { youtubeUrl: "http://www.youtube.com/watch?v=Zm7r491n-8o" }
+      ]
     });
   };
 

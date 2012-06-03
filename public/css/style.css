@@ -28,6 +28,9 @@ h3 {
   color: #999;
   text-shadow: 0 -1px black;
 }
+a {
+  text-decoration: none;
+}
 .subtitle {
   color: #5c5d5d;
 }
@@ -70,8 +73,7 @@ article {
     position: relative;
     margin: 34px 0;
     width: 920px;
-    height: 548px;
-    background: url(../img/movie_image.png);
+    height: 518px;
     box-shadow: 0 0 13px black;
   }
   .video:before,
@@ -84,7 +86,7 @@ article {
     top: -34px;
     left: -164px;
     padding: 34px 0 133px;
-    height: 548px;
+    height: 518px;
     width: 1248px;
     background: -webkit-radial-gradient(center, contain, hsla(210,8%,50%,0.34), hsla(210,8%,50%,0));
   }
