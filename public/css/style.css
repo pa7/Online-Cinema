@@ -48,14 +48,14 @@ header {
     top: 8px;
     left: 21px;
     position: absolute;
-    margin: -7px 0 0 -6px;
-    width: 76px;
+    margin: -7px 0 0 -13px;
+    width: 86px;
     height: 76px;
-    background: url(../img/logo_top.png);
+    background: url(../img/logo_top.png) no-repeat;
   }
   .center {
     /* logos offset: 21 gutter 64 width 21 gutter = 108 */
-    margin-left: 108px;
+    margin-left: 113px;
     padding: 13px 21px;
     border-left: 1px solid #515151;
     box-shadow: -1px 0 black;
@@ -414,9 +414,16 @@ footer {
   background: url(../img/moviepilot_bottom.png);
 }
 
-.home {
-  -webkit-user-select: none;
+.home header h1 {
+  margin-bottom: 1px;
+  width: 162px;
+  height: 35px;
+  font: 0/0 a;
+  color: transparent;
+  text-shadow: none;
+  background: url(../img/logotype.png);
 }
+  
 .ticketList {
   padding: 34px 0;
   position: absolute;
@@ -455,15 +462,16 @@ footer {
   }
   .ticketList .paper {
     margin-top: 0;
-    top: -13px;
+    top: -130px;
     position: relative;
-    -webkit-perspective: 1000px;
+    -webkit-perspective: 2500px;
     -webkit-transform-style: preserve-3d;
   }
   .ticketList .holder {
     padding: 1px 0;
     position: absolute;
-    width: 100%;
+    margin: 0 71px;
+    width: 778px;
     box-sizing: border-box;
     -webkit-transform: translateZ(0);
     -webkit-transform-style: preserve-3d;
@@ -472,7 +480,7 @@ footer {
     margin: 0;
     padding: 13px;
     -webkit-transform-origin: top;
-    cursor: move;
+    cursor: pointer;
   }
   /*.ticketList .holder:nth-child(odd) .ticket {
     -webkit-transform-origin: top;
