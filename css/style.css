@@ -7,13 +7,14 @@ body {
 h1 {
   margin: 0;
   font-size: 30px;
-  line-height: 34px;
-  font-weight: normal;
+  line-height: 36px;
   color: #f3f3f3;
-  text-shadow: 0 1px #1a1a1b;
+  font-weight: bold;
+  -webkit-mask-image: -webkit-linear-gradient(rgba(255,255,255,1), rgba(255,255,255,.55));
+  text-shadow: 0 1px #1a1b1c;
 }
 h2 {
-  margin: 0 0 21px;
+  margin: 21px 0;
   font-weight: normal;
   font-size: 16px;
   color: #646464;
@@ -62,11 +63,12 @@ header {
     position: absolute;
   }
 article {
-  border-top: 1px solid #515151;
+  border-top: 1px solid rgba(255,255,255,.13);
+  overflow: hidden;
 }
   .video {
     position: relative;
-    margin: 34px 0 55px;
+    margin: 34px 0;
     width: 920px;
     height: 548px;
     background: url(../img/movie_image.png);
@@ -112,7 +114,7 @@ article {
   aside {
     float: right;
     position: relative;
-    margin: 0 34px 0 55px;
+    margin: 0 34px;
   }
   aside h2 {
     display: inline-block;
@@ -164,26 +166,32 @@ article {
   box-shadow: 0 1px rgba(255,255,255,.03) inset;
   cursor: pointer;
 }
+  .button:hover {
+    background: black;
+    border-color: black;
+  }
+  .medium.button {
+    padding: 3px 8px;
+    font-size: 14px;
+  }
 
 .screenings {
-  background: rgba(255,255,255,.03);
-  margin: -13px -34px -26px;
-  padding: 21px 14px;
+  background: rgba(0,0,0,.05);
+  padding: 13px;
+  margin: 0 -34px 221px;
   color: #666;
   font-size: 14px;
-  border: 1px solid #222;
-  border-bottom: none;
+  border: 1px solid #111;
+  border-bottom-color: #111;
   border-radius: 8px;
   box-shadow: 
-    0 1px rgba(0,0,0,.13),
-    0 3px 0 -1px rgba(0,0,0,.13),
-    0 5px 0 -2px rgba(0,0,0,.13),
-    0 7px 0 -3px rgba(0,0,0,.13),
-    0 8px 21px -3px rgba(0,0,0,.34);
+    0 1px rgba(255,255,255,.08),
+    0 1px rgba(0,0,0,.13) inset,
+    0 0 13px rgba(0,0,0,.55) inset;
 }
 .screenings h2 {
-  font-size: 34px;
-  line-height: 34px;
+  margin-top: 8px;
+  font-size: 21px;
   text-align: center;
   font-family: 'Pacifico', cursive;
   display: block;
@@ -197,13 +205,13 @@ article {
     padding: 8px 13px;
   }
   .screenings td:last-child {
-    width: 74px;
+    text-align: right;
   }
 .printer {
   position: relative;
   width: 278px;
-  height: 180px;
-  margin: 0 0 21px;
+  height: 2px;
+  margin: 0 5px 5px;
   z-index: 1;
 }
   .printer:before {
@@ -211,12 +219,12 @@ article {
     position: absolute;
     z-index: -1;
     top: -2px;
-    left: -8px;
-    width: 294px;
+    left: -5px;
+    width: 288px;
     height: 2px;
     background: black;
     border-radius: 6px;
-    box-shadow: 0 0 0 6px #222;
+    box-shadow: 0 0 0 6px rgba(0,0,0,.21);
   }
   .paperRoll {
     overflow: hidden;
@@ -237,11 +245,11 @@ article {
   .printed .paper {
     margin-top: -140px;
   }
-  .printed .ticket:last-child {
+  /*.printed .ticket:last-child {
     margin-top: 100px;
     opacity: 0;
     -webkit-transition: 500ms ease 1s;
-  }
+  }*/
 .ticket {
   height: 129px;
   position: relative;
@@ -259,9 +267,9 @@ article {
     content: "";
     position: absolute;
     z-index: 1;
-    width: 255px;
     height: 10px;
-    left: 10px;
+    left: 12px;
+    right: 12px;
     bottom: -6px;
     background: url(../img/nob.png);
   }
@@ -296,6 +304,12 @@ article {
     .ticket .info, .ticket .date {
       float: left;
     }
+    .ticket .title {
+      margin: 40px 0 0 5px;
+      font-size: 34px;
+      line-height: 1;
+      float: left;
+    }
     .ticket .info {
       padding: 0 8px;
     }
@@ -305,16 +319,16 @@ article {
     .ticket .date {
       float: right;
       padding-left: 8px;
+      text-align: center;
       border-left: 1px dotted #353535;
     }
       .ticket .day {
-        font-size: 75px;
+        font-size: 55px;
         line-height: 55px;
       }
       .ticket .month {
         font-size: 15px;
         line-height: 21px;
-        text-align: center;
         text-transform: uppercase;
         display: block;
       }
@@ -378,3 +392,25 @@ article {
     vertical-align: bottom;
     background: url(../img/time_icon.png);
   }
+  
+footer {
+  margin-top: 34px;
+  padding: 55px 0;
+  clear: both;
+  border-top: 1px solid black;
+  display: -webkit-box;
+  -webkit-box-pack: center;
+  box-shadow: 0 1px rgba(255,255,255,.08) inset;
+}
+.byMoviepilot {
+  width: 137px;
+  height: 54px;
+  font: 0/0 a;
+  color: transparent;
+  text-shadow: none;
+  background: url(../img/moviepilot_bottom.png);
+}
+
+.ticketList {
+  margin: 34px 0;
+}
